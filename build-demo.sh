@@ -2,19 +2,17 @@
 
 MODULE_NAME="scrollTo"
 
+mkdir docs
+mkdir docs/js
+
 jspm link github:DEGJS/$MODULE_NAME -f
 
-cd demo
-
-mkdir dist
-mkdir dist/js
-
-cd src
+cd demo/src
 
 jspm install
 jspm install --link github:DEGJS/$MODULE_NAME
-jspm bundle-sfx main ../dist/js/main.js --skip-source-maps
+jspm bundle-sfx main ../../docs/js/main.js --skip-source-maps
 
-cp *.html ../dist/
-cp *.css ../dist/
-cp -R js/polyfills/ ../dist/js/polyfills
+cp *.html ../../docs/
+cp *.css ../../docs/
+cp -R js/polyfills/ ../../docs/js/polyfills
