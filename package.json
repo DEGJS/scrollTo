@@ -1,6 +1,6 @@
 {
 	"name": "scrollTo",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Animated scrolling to an element or position",
 	"keywords": [
 		"scroll",
