@@ -22,7 +22,7 @@
 	},
 	"jspm": {
 		"dependencies": {			
-			"easing": "github:DEGJS/easing@^1.0.1"
+			"DEGJS/easing": "github:DEGJS/easing@^1.0.1"
 		},
 		"format": "es6",
   		"registry": "jspm",
