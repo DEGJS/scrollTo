@@ -18,7 +18,7 @@
 	"main": "src/scrollTo.js",
 	"bugs": "https://github.com/DEGJS/scrollTo/issues",
 	"scripts": {
-		"build-demo": "./build-demo.sh",
+		"build-demo": "cd demo/src && npm install && rollup --config ../rollup.config.js",
 		"deploy-demo": "./deploy-demo.sh"
 	},
 	"devDependencies": {},
