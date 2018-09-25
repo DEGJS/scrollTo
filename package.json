@@ -1,34 +1,31 @@
 {
-	"name": "scrollTo",
-	"version": "1.0.1",
+	"name": "@degjs/scroll-to",
+	"version": "2.0.0",
 	"description": "Animated scrolling to an element or position",
 	"keywords": [
 		"scroll",
-	    "animate scroll"
+		"animate scroll"
 	],
 	"author": "Ryan Heap <heaper@gmail.com>",
 	"license": "MIT",
 	"repository": {
-        "type": "git",
-        "url": "https://github.com/DEGJS/scrollTo.git"
-    },
-    "bugs": "https://github.com/DEGJS/scrollTo/issues",
-    "scripts": {
-    	"build-demo": "./build-demo.sh",
-    	"deploy-demo": "./deploy-demo.sh"
-    },
-    "devDependencies": {  
-		"jspm": "^0.16.39"
+		"type": "git",
+		"url": "https://github.com/DEGJS/scrollTo.git"
 	},
-	"jspm": {
-		"dependencies": {			
-			"DEGJS/easing": "github:DEGJS/easing@^1.0.1"
-		},
-		"format": "es6",
-  		"registry": "jspm",
-  		"main": "scrollTo",
-  		"directories": {
-	      "lib": "src"
-	    }
+	"files": [
+		"src"
+	],
+	"main": "src/scrollTo.js",
+	"bugs": "https://github.com/DEGJS/scrollTo/issues",
+	"scripts": {
+		"build-demo": "./build-demo.sh",
+		"deploy-demo": "./deploy-demo.sh"
+	},
+	"devDependencies": {},
+	"dependencies": {
+		"@degjs/easing": "^2.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

@@ -1,4 +1,4 @@
-import * as easing from "DEGJS/easing";
+import * as easing from "@degjs/easing";
 
 let scrollTo = function (options) {
 
