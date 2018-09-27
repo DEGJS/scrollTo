@@ -18,14 +18,31 @@
 	"main": "src/scrollTo.js",
 	"bugs": "https://github.com/DEGJS/scrollTo/issues",
 	"scripts": {
+		"test": "jest",
 		"build-demo": "cd demo/src && npm install && rollup --config ../rollup.config.js",
 		"deploy-demo": "./deploy-demo.sh"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.1.0",
+		"@babel/preset-env": "^7.1.0",
+		"babel-core": "^7.0.0-bridge.0",
+		"babel-jest": "^23.6.0",
+		"jest": "^23.6.0"
+	},
 	"dependencies": {
 		"@degjs/easing": "^2.0.0"
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"jest": {
+		"testPathIgnorePatterns": [
+			"/node_modules/"
+		]
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
 	}
 }

@@ -27,7 +27,7 @@ const scrollTo = function (options) {
         } else {
 
             initialPosition = getInitialPosition();
-            totalIterations = Math.ceil(fps*(settings.duration/1000));
+            totalIterations = Math.ceil(fps * (settings.duration / 1000));
             totalPositionChange = finalPosition - initialPosition;
             easingFunction = getEasingFunction();
 
@@ -75,10 +75,10 @@ const scrollTo = function (options) {
         if (currentIteration < totalIterations) {
             currentIteration++;
         
-            var val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
+            const val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
           
             move(val);
-        
+            
             window.requestAnimationFrame(animateScroll);
         } 
     };
