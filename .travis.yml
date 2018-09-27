@@ -6,8 +6,8 @@ cache:
   - node_modules
 env:
   global:
-  - ENCRYPTION_LABEL=3b4cc477e52f
-  - COMMIT_AUTHOR_EMAIL=scheul93@gmail.com
+  - ENCRYPTION_LABEL: 3b4cc477e52f
+  - COMMIT_AUTHOR_EMAIL: scheul93@gmail.com
 before_install:
 - npm install -g rollup
 deploy:
