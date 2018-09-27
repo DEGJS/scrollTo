@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+env:
+  global:
+  - ENCRYPTION_LABEL: 3b4cc477e52f
+  - COMMIT_AUTHOR_EMAIL: scheul93@gmail.com
+before_install:
+- npm install -g rollup
+deploy:
+  - provider: npm
+    email: scheul93@gmail.com
+    api_key:
+      secure: o9yuweDuPu8NDlCFGeqMwgM4lpHUY13YfwH2vKHrUpAjBQk5nGklyhbuay30Rjdo1Nk8dFy+5Atn6b5ZxpyHd805ZwL/SNS25xBhyvkt9HWHOh8VbllRoulDZwtTyXk2pwFSdE8OBaJAB3UDUomh57r2t2iTHpKvI2VCIHcJIxAGid5x2tDsuaEPGcej25WVQFOHRYQYX19bV2c+xnylcnybuugEi0ZablNFI9WxMAFlV2RtcteE6ATBG944S+8GpoKt2CJnrPCuiVLI6WIQAGXjJpyMmt7xjGXw3jxDs8aIO4rjX2ogjT+gPoQdt/lZyCtWOA0mcCbAsrPxxGy2E0kg2jQGnas+IawCjesvFy2o6mX06wOC7+8ztcWjag+hhExE6DoDX6+pt2NGT+qk5JyyAsV3NSnf2uBAt4K5h0ifQGHdIf4MC6OaU9b56l3vPKWHP0oYVHwF9WSeHeSRNSXSElLcjY5THYrBf5mSQslNjD0YPfba8OahbejtIVDxt6+y1GqHnGV/loARcIg1HRFgU0uy4JZKNhFy5ahfMH2fPfrYhwz/fgJOA/lv7wOQBx8f2FsJtIddDnUbmiGm/DEqlRgihgRVMGgfvY2VddJmUWJoLR4XRXWsUFKKbk7hfAkZj6dx1z5kod1BR27YlCFYDxylwlsOstt2XGueA4A=
+    on:
+      tags: true
+      branch: master
+      repo: DEGJS/scrollTo
+  - provider: script
+    script: bash deploy-demo.sh

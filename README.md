@@ -1,20 +1,22 @@
 # scrollTo
+[![Build Status](https://travis-ci.org/DEGJS/scrollTo.svg?branch=master)](https://travis-ci.org/DEGJS/scrollTo)
+
 ScrollTo is a module that will scroll to a specified element or position on a page with animated movement. It takes advantage of the native [window.requestAnimationFrame()](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) method to ensure smooth animation.
 
 ## Demo
 You can view a demo of scrollTo [here](http://degjs.github.io/scrollTo/).
 
 ## Install
-ScrollTo is an ES6 module. Consequently, you'll need an ES6 transpiler ([Babel](https://babeljs.io) is a nice one) and a module loader ([SystemJS](https://github.com/systemjs/systemjs) will do the job) as part of your Javascript workflow.
+ScrollTo is an ES6 module. Consequently, you'll need an ES6 transpiler ([Babel](https://babeljs.io) is a nice one) as part of your Javascript workflow.
 
-If you're already using the [JSPM package manager](http://jspm.io) for your project, you can install scrollTo with the following command:
+If you're already using NPM for your project, you can install scrollTo with the following command:
 
 ```
-$ jspm install github:DEGJS/scrollTo
+$ npm install @degjs/scroll-to
 ```
 ## Usage
 ```js
-import scrollTo from "DEGJS/scrollTo";
+import scrollTo from "@degjs/scroll-to";
 
 /* Scroll to an element with a 1-second, eased-in animation */
 let destinationElement = document.querySelector('.some-element');

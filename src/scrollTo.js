@@ -1,33 +1,33 @@
-import * as easing from "DEGJS/easing";
+import * as easing from "@degjs/easing";
 
-let scrollTo = function (options) {
+const scrollTo = function (options) {
 
     const fps = 60;
 
-    let currentIteration = 0,
-        totalIterations,
-        initialPosition,
-        totalPositionChange,
-        easingFunction,
-        settings,
-        defaults = {
-            element: null,
-            position: null,
-            duration: 500,
-            easing: 'easeOut'
-        };;
+    let currentIteration = 0;
+    let totalIterations;
+    let initialPosition;
+    let totalPositionChange;
+    let easingFunction;
+    let settings;
+    const defaults = {
+        element: null,
+        position: null,
+        duration: 500,
+        easing: 'easeOut'
+    };
 
     function init() {
         settings = Object.assign({}, defaults, options);
 
-        let finalPosition = getFinalPosition();
+        const finalPosition = getFinalPosition();
 
         if (!window.requestAnimationFrame || settings.duration === 0) {
             move(finalPosition);
         } else {
 
             initialPosition = getInitialPosition();
-            totalIterations = Math.ceil(fps*(settings.duration/1000));
+            totalIterations = Math.ceil(fps * (settings.duration / 1000));
             totalPositionChange = finalPosition - initialPosition;
             easingFunction = getEasingFunction();
 
@@ -75,10 +75,10 @@ let scrollTo = function (options) {
         if (currentIteration < totalIterations) {
             currentIteration++;
         
-            var val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
+            const val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
           
             move(val);
-        
+            
             window.requestAnimationFrame(animateScroll);
         } 
     };

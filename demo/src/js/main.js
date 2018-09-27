@@ -1,4 +1,4 @@
-import scrollTo from "DEGJS/scrollTo";
+import scrollTo from "../../../src/scrollTo";
 
 let demo = function() {
 
