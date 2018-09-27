@@ -19,7 +19,7 @@
 	"bugs": "https://github.com/DEGJS/scrollTo/issues",
 	"scripts": {
 		"test": "jest",
-		"build-demo": "cd demo/src && npm install && rollup --config ../rollup.config.js",
+		"build-demo": "npm install && cd demo/src && npm install && rollup --config ../rollup.config.js",
 		"deploy-demo": "./deploy-demo.sh"
 	},
 	"devDependencies": {

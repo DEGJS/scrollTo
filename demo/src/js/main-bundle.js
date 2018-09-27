@@ -19,15 +19,15 @@ this['main-bundle'].js = (function () {
 	  return changeInValue * Math.pow(currentIteration / totalIterations, 3) + startValue;
 	}
 
-	let scrollTo = function (options) {
+	const scrollTo = function (options) {
 	  const fps = 60;
-	  let currentIteration = 0,
-	      totalIterations,
-	      initialPosition,
-	      totalPositionChange,
-	      easingFunction,
-	      settings,
-	      defaults = {
+	  let currentIteration = 0;
+	  let totalIterations;
+	  let initialPosition;
+	  let totalPositionChange;
+	  let easingFunction;
+	  let settings;
+	  const defaults = {
 	    element: null,
 	    position: null,
 	    duration: 500,
@@ -36,7 +36,7 @@ this['main-bundle'].js = (function () {
 
 	  function init() {
 	    settings = Object.assign({}, defaults, options);
-	    let finalPosition = getFinalPosition();
+	    const finalPosition = getFinalPosition();
 
 	    if (!window.requestAnimationFrame || settings.duration === 0) {
 	      move(finalPosition);
@@ -83,7 +83,7 @@ this['main-bundle'].js = (function () {
 	  function animateScroll() {
 	    if (currentIteration < totalIterations) {
 	      currentIteration++;
-	      var val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
+	      const val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
 	      move(val);
 	      window.requestAnimationFrame(animateScroll);
 	    }
