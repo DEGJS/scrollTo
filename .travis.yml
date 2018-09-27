@@ -20,4 +20,5 @@ deploy:
       branch: master
       repo: DEGJS/scrollTo
   - provider: script
+    skip_cleanup: true
     script: bash deploy-demo.sh
