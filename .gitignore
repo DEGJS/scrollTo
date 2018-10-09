@@ -1,4 +1,4 @@
 node_modules
 Thumbs.db
 .DS_Store
-demo/src/js/jspm_packages
+demo/dist

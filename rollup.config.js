@@ -3,9 +3,9 @@ import commonJs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 
 export default {
-    input: 'js/main.js',
+    input: './demo/src/js/main.js',
     output: {
-        file: 'js/main-bundle.js',
+        file: './demo/dist/js/main-bundle.js',
         format: 'iife',
         name: 'main-bundle.js'
     },
