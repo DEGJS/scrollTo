@@ -19,15 +19,15 @@ this['main-bundle'].js = (function () {
 	  return changeInValue * Math.pow(currentIteration / totalIterations, 3) + startValue;
 	}
 
-	const scrollTo = function (options) {
-	  const fps = 60;
-	  let currentIteration = 0;
-	  let totalIterations;
-	  let initialPosition;
-	  let totalPositionChange;
-	  let easingFunction;
-	  let settings;
-	  const defaults = {
+	var scrollTo = function scrollTo(options) {
+	  var fps = 60;
+	  var currentIteration = 0;
+	  var totalIterations;
+	  var initialPosition;
+	  var totalPositionChange;
+	  var easingFunction;
+	  var settings;
+	  var defaults = {
 	    element: null,
 	    position: null,
 	    duration: 500,
@@ -36,7 +36,7 @@ this['main-bundle'].js = (function () {
 
 	  function init() {
 	    settings = Object.assign({}, defaults, options);
-	    const finalPosition = getFinalPosition();
+	    var finalPosition = getFinalPosition();
 
 	    if (!window.requestAnimationFrame || settings.duration === 0) {
 	      move(finalPosition);
@@ -56,10 +56,10 @@ this['main-bundle'].js = (function () {
 	  }
 
 	  function getFinalPosition() {
-	    let finalPosition = settings.element ? settings.element.offsetTop : settings.position;
-	    let viewportHeight = getViewportHeight();
-	    let documentHeight = getDocumentHeight();
-	    let maxPosition = documentHeight - viewportHeight;
+	    var finalPosition = settings.element ? settings.element.offsetTop : settings.position;
+	    var viewportHeight = getViewportHeight();
+	    var documentHeight = getDocumentHeight();
+	    var maxPosition = documentHeight - viewportHeight;
 
 	    if (finalPosition > maxPosition) {
 	      finalPosition = maxPosition;
@@ -83,7 +83,7 @@ this['main-bundle'].js = (function () {
 	  function animateScroll() {
 	    if (currentIteration < totalIterations) {
 	      currentIteration++;
-	      const val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
+	      var val = Math.round(easingFunction(currentIteration, initialPosition, totalPositionChange, totalIterations));
 	      move(val);
 	      window.requestAnimationFrame(animateScroll);
 	    }
