@@ -1,7 +1,9 @@
 # scrollTo
-[![Build Status](https://travis-ci.org/DEGJS/scrollTo.svg?branch=master)](https://travis-ci.org/DEGJS/scrollTo)
+![Run Tests](https://github.com/DEGJS/scrollTo/workflows/Run%20Tests/badge.svg)
 
 ScrollTo is a module that will scroll to a specified element or position on a page with animated movement. It takes advantage of the native [window.requestAnimationFrame()](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) method to ensure smooth animation.
+
+**Please note** that several native scrolling methods exist with animation capabilities, including [Element.scrollTo()](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo), [Window.scrollTo()](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo), and [Element.scrollIntoView()](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView). If these native methods meet your needs, we recommend using them in favor of this module.
 
 ## Demo
 You can view a demo of scrollTo [here](http://degjs.github.io/scrollTo/).
